@@ -5,7 +5,6 @@ bot = telebot.TeleBot('6491424040:AAFhih5ZjUoxg4JHMvL9F7wX6YyJkCwtQSA')
 @bot.message_handler(content_types=['text'])
 def echo(message:telebot.types.Message):
     text = message.text
-    print(text)
     id = message.chat.id
     if text == '/start':
         bot.send_message(id, 'Привет! Напиши любое слово/термин')
